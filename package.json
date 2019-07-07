@@ -5,7 +5,10 @@
   "dependencies": {
     "@material-ui/core": "^4.2.0",
     "@material-ui/icons": "^4.2.1",
+    "@material-ui/styles": "^4.2.0",
     "chroma-js": "^2.0.4",
+    "install": "^0.13.0",
+    "npm": "^6.10.0",
     "rc-slider": "^8.6.13",
     "react": "^16.8.6",
     "react-copy-to-clipboard": "^5.0.1",
