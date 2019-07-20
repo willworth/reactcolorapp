@@ -1,21 +1,15 @@
 import React, { Component } from "react";
-
 import ColorBox from "./ColorBox";
-import "rc-slider/assets/index.css";
-import "./Palette.css";
 import Navbar from "./Navbar";
+import "./Palette.css";
 
 class Palette extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      level: 400,
-      format: "hex"
-    };
+    this.state = { level: 500, format: "hex" };
     this.changeLevel = this.changeLevel.bind(this);
     this.changeFormat = this.changeFormat.bind(this);
   }
-
   changeLevel(level) {
     this.setState({ level });
   }
@@ -30,24 +24,21 @@ class Palette extends Component {
         background={color[format]}
         name={color.name}
         key={color.id}
-        id={color.id}
-        paletteId={id}
+        moreUrl={`/palette/${id}/${color.id}`}
+        showLink
       />
     ));
-
     return (
       <div className="Palette">
         <Navbar
-          handleChange={this.changeFormat}
           level={level}
           changeLevel={this.changeLevel}
+          handleChange={this.changeFormat}
         />
-
         <div className="Palette-colors">{colorBoxes}</div>
-        {/* footer */}
-        <footer className="palette-footer">
+        <footer className="Palette-footer">
           {paletteName}
-          <span className="emoji"> {emoji}</span>
+          <span className="emoji">{emoji}</span>
         </footer>
       </div>
     );
