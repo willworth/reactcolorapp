@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { withStyles } from "@material-ui/styles";
 
 import MiniPalette from "./MiniPalette";
